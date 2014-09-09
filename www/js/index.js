@@ -72,28 +72,27 @@ var app = {
 
         // BackgroundGeoLocation is highly configurable.
         bgGeo.configure(callbackFn, failureFn, {
-            url: 'http://only.for.android.com/update_location.json', // <-- only required for Android; ios allows javascript callbacks for your http
-            params: {                                               // HTTP POST params sent to your server when persisting locations.
+            url: 'https://backend-c9-dreamweaver1231_1.c9.io/geolocation', // <-- only required for Android; ios allows javascript callbacks for your http
+            /*params: {                                               // HTTP POST params sent to your server when persisting locations.
                 auth_token: 'user_secret_auth_token',
                 foo: 'bar'
             },
             headers: {
                 'X-Foo': 'bar'
-            },
+            },*/
+            //locationTimeout: 10,
             desiredAccuracy: 10,
             stationaryRadius: 20,
             distanceFilter: 30,
-            notificationTitle: 'Background tracking',   // <-- android only, customize the title of the notification
-            notificationText: 'ENABLED',                // <-- android only, customize the text of the notification
+            notificationTitle: 'Geolocation tracking',   // <-- android only, customize the title of the notification
+            notificationText: 'ACTIVE',                // <-- android only, customize the text of the notification
             activityType: "AutomotiveNavigation",       // <-- iOS-only
             debug: true     // <-- enable this hear sounds for background-geolocation life-cycle.
         });
-
         // Turn ON the background-geolocation system.  The user will be tracked whenever they suspend the app.
         bgGeo.start();
 
         // If you wish to turn OFF background-tracking, call the #stop method.
         // bgGeo.stop()
     }
-
 };
