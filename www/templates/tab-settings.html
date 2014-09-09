@@ -1,0 +1,35 @@
+<ion-view title="Settings">
+    <ion-content class="has-header">
+        <div class="list">
+        
+          <div class="item item-icon-left item-icon-right">
+            <i class="icon ion-waterdrop"></i>
+            Fuel Type
+            <span class="item-note" ng-model="user.fuelType">
+                {{user.fuelType}}
+            </span>
+            <i class="icon ion-edit" ng-click="showSelectionPopupFuel()"></i>
+          </div>
+        
+          <div class="item item-icon-left item-icon-right">
+            <i class="icon ion-location"></i>
+            Distance Unit
+            <span class="item-note" ng-model="user.distanceUnit">
+                {{user.distanceUnit}}
+            </span>
+            <i class="icon ion-edit" ng-click="showSelectionPopupDistance()"></i>
+          </div>
+          
+          <div class="item item-toggle item-icon-left">
+            <i class="icon ion-clipboard"></i>
+             Enable Notifications
+             <label class="toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,10 @@
+<div class="list" ng-controller="SettingDistanceCtrl">
+    <ion-toggle ng-model="distanceUnit.Miles"
+                ng-change="distanceUnitChange('Miles')">
+      km
+    </ion-toggle>
+    <ion-toggle ng-model="distanceUnit.Km"
+                ng-change="distanceUnitChange('Km')">
+      Miles
+    </ion-toggle>
+</div>
